@@ -5,6 +5,6 @@ class Message < ApplicationRecord
    validates :content, presence: true, unless: :was_attached?
 
    def was_attached?
-      self.image.was_attached?
-   end
+      self.image.attached?
+    end
 end
